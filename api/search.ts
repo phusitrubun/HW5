@@ -2,6 +2,9 @@ import Express from "express";
 import { conn } from "../dbconnect";
 
 export const router = Express.Router();
+router.get('/', (req, res)=>{
+  res.send('helloooooooooooo pnat');
+});
 
 router.get("/search", (req, res) => {
     conn.query(
@@ -52,3 +55,4 @@ router.get("/search", (req, res) => {
     }
   );
 });
+
